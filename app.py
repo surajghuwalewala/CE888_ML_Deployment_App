@@ -57,9 +57,9 @@ def my_form_post():
     target = get_predictions(age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal, req_model)
 
     if target==1:
-        sale_making = 'Patient likely has heart disease'
+        sale_making = 'Patient might have heart disease'
     else:
-        sale_making = 'Patient is unlikely to have heart disease'
+        sale_making = 'Patient might NOT have heart disease'
 
     return render_template('home.html', target = target, sale_making = sale_making)
 
